@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(catkin REQUIRED COMPONENTS
     roscpp
+    rospy
     message_generation
     image_transport
     camera_info_manager
