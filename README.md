@@ -21,8 +21,6 @@ ONLY TESTED ON MER2-302!!!
 
 ## Download and build code
 
-This is a ros_packages,you should put it in your ROS workspace.
-
 1. git clone
 2. Make in your workspace
 
@@ -57,4 +55,7 @@ rosrun camera_calibration cameracalibrator.py --size 7x5 --square 0.030 image:=/
 - nodelet support
 - test on other device
 
-# galaxy_camera
+# 数据信息
+
+相机型号：MER-200-20GC
+IP地址：192.168.29.1 和 192.168.29.2

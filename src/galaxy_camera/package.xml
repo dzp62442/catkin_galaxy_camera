@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>galaxy_camera</name>
+    <name>galaxy_camera_pkg</name>
     <version>1.0.0</version>
     <description>The galaxy_camera package</description>
 
@@ -12,6 +12,10 @@
     <build_depend>roscpp</build_depend>
     <build_export_depend>roscpp</build_export_depend>
     <exec_depend>roscpp</exec_depend>
+    <!-- 使用自定义消息 -->
+    <build_depend>message_generation</build_depend>
+    <build_export_depend>message_runtime</build_export_depend>
+    <exec_depend>message_runtime</exec_depend>
 
 
     <!-- The export tag contains other, unspecified, tags -->

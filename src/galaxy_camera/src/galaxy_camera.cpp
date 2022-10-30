@@ -3,11 +3,8 @@
 //
 
 #include <galaxy_camera.h>
-
 #include <utility>
-
 #include <stdio.h>
-
 #include <iostream>
 #include <string>
 
@@ -49,7 +46,7 @@ namespace galaxy_camera {
         //cout<<"status:"<<status<<endl;
         // Get handle
         assert(GXOpenDevice(&open_param, &dev_handle_) != GX_STATUS_SUCCESS);
-        ROS_INFO("Camera Opened");
+        ROS_INFO("Open camera success!");  // 打开相机成功
 
         int64_t format = 0;
         if (encoding == "mono8")
