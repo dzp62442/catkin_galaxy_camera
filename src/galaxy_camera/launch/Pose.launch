@@ -1,0 +1,11 @@
+<launch>
+    <!-- 启动节点 pkg:功能包名 type:可执行程序名 name:节点名 -->
+    <node pkg="galaxy_camera_pkg" type="galaxy_camera_exe" name="galaxy_camera_node" output="screen">
+        <param name="camera_name" value="MER_200_20GC"/>
+        <param name="device_ip" value="192.168.29.1"/>
+        <param name="image_width" value="1024"/>
+        <param name="image_height" value="768"/>
+        <param name="pixel_format" value="bgr8"/>
+    </node>
+    <node pkg="galaxy_camera_pkg" type="listener_exe" name="listener_node" output="screen"/>
+</launch>

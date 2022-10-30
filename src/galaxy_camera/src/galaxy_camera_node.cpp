@@ -19,19 +19,16 @@ namespace galaxy_camera {
         */
         image_pub_ = it.advertiseCamera("image_raw", 1);
 
-        // 加载相机信息
-        std::string camera_name = "MER_200_20GC";  // 相机型号
-        std::string device_ip = "192.168.29.1";  // 设备IP 
-        nh_.param("camera_frame_id", galaxy_camera::GalaxyCamera::image_.header.frame_id, camera_name);
-        nh_.param("camera_name", camera_name_, camera_name);
+        // 加载相机参数信息
+        nh_.param("camera_frame_id", galaxy_camera::GalaxyCamera::image_.header.frame_id, std::string("camera_optical_frame"));
+        nh_.param("camera_name", camera_name_, std::string("Pinhole Camera"));
         nh_.param("camera_info_url", camera_info_url_, std::string(""));
         nh_.param("image_width", image_width_, 1280);
         nh_.param("image_height", image_height_, 1024);
         nh_.param("image_offset_x", image_offset_x_, 0);
         nh_.param("image_offset_y", image_offset_y_, 0);
         nh_.param("pixel_format", pixel_format_, std::string("bgr8"));
-        nh_.param("device_ip", device_ip_, device_ip);
-        ROS_INFO("My IP is  %s", device_ip_.c_str());
+        nh_.param("device_ip", device_ip_, std::string("192.168.29.1"));
         info_.reset(new camera_info_manager::CameraInfoManager(nh_, camera_name_, camera_info_url_));
         // check for default camera info
         if (!info_->isCalibrated()) {

@@ -29,7 +29,7 @@ include_directories(
 add_executable(galaxy_camera_exe src/galaxy_camera.cpp src/galaxy_camera_node.cpp)
 target_link_libraries(galaxy_camera_exe gxiapi ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES} ${OpenCV_LIBS})
+add_executable(listener_exe src/listener.cpp)
+target_link_libraries(listener_exe ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
 

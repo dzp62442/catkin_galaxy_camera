@@ -42,7 +42,7 @@ namespace galaxy_camera {
         //open_param.openMode = GX_OPEN_INDEX;
         //open_param.pszContent = (char *) "1";
         GX_STATUS status = GXOpenDevice(&open_param, &dev_handle_);
-        ROS_INFO("!!!!!!!!device_ip %s", device_ip.c_str());
+        ROS_INFO("Device ip is: %s", device_ip.c_str());
         //cout<<"status:"<<status<<endl;
         // Get handle
         assert(GXOpenDevice(&open_param, &dev_handle_) != GX_STATUS_SUCCESS);
