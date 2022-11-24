@@ -119,7 +119,7 @@ namespace galaxy_camera {
         nh_.param("black_auto", black_auto, false);
         nh_.param("black_value", black_value, 2.0);
 
-        nh_.param("white_auto", white_auto, false);
+        nh_.param("white_auto", white_auto, true);
         nh_.param("white_selector", white_selector, 0);
         nh_.param("white_value", white_value, 2.3867);
 
